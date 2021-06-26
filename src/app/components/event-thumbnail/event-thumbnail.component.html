@@ -1,1 +1,14 @@
-<p>event-thumbnail works!</p>
+<div class="well hoverwell thumbnail">
+  <h2>{{ detail?.name }}</h2>
+  <div>Date: {{ detail?.date }}</div>
+  <div>Time: {{ detail?.time }}</div>
+  <div>Price: $ {{ detail?.price }}</div>
+  <div>
+    <span>Location: {{ detail?.location.address }}</span>
+    <span>&nbsp;</span>
+    <span class="pad-left"
+      >{{ detail?.location.city }} {{ detail?.location.country }}</span
+    >
+  </div>
+  <div>Online URL: {{ detail?.onlineUrl }}</div>
+</div>
