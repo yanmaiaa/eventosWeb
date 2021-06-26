@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'src/app/common/toastr.service';
-import { EventService } from 'src/app/services/event.services';
+import { EventService } from '../shared/event.service';
 
 declare let toastr: any;
 

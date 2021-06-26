@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "eventosapp": {
+    "module01": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,19 +20,21 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/eventosapp",
+            "outputPath": "dist/module01",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/toastr/build/toastr.min.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "node_modules/jquery/dist/jquery.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/toastr/build/toastr.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -72,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "eventosapp:build:production"
+              "browserTarget": "module01:build:production"
             },
             "development": {
-              "browserTarget": "eventosapp:build:development"
+              "browserTarget": "module01:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "eventosapp:build"
+            "browserTarget": "module01:build"
           }
         },
         "test": {
@@ -101,5 +103,5 @@
       }
     }
   },
-  "defaultProject": "eventosapp"
+  "defaultProject": "module01"
 }
