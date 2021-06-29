@@ -9,6 +9,7 @@ import { EventThumbnailComponent } from './events/event-thumbnail/event-thumbnai
 import { EventService } from './events/shared/event.service';
 import { NavBarComponent } from './nav/nav.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
+import { CreateEventComponent } from './events/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { EventDetailsComponent } from './events/event-details/event-details.comp
     EventThumbnailComponent,
     NavBarComponent,
     EventDetailsComponent,
+    CreateEventComponent,
   ],
   imports: [
     //Aqui é para importar outros módulos
