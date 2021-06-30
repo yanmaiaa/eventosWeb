@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-event.component.css'],
 })
 export class CreateEventComponent implements OnInit {
+  isDirty: boolean = true; //Propriedade para o botão não ficar false, com isso, colocamos como parâmetro lá em app.module
   constructor(private router: Router) {}
 
   ngOnInit(): void {}
