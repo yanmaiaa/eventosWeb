@@ -10,3 +10,4 @@ export * from './errors/error404/error404.component';
 export * from './common/toastr.service';
 export * from './app.component';
 export * from './app-routing.module';
+export * from './events/shared/event.models';

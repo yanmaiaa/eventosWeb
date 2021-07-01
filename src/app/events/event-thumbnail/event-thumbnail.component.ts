@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { IEvent } from 'src/app/barrels';
 
 @Component({
   selector: 'event-thumbnail',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./event-thumbnail.component.css'],
 })
 export class EventThumbnailComponent {
-  @Input() detail: any;
+  @Input() detail!: IEvent;
 
   getStartTimeClass() {
     //Uma das alternativas
