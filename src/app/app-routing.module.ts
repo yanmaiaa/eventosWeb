@@ -7,6 +7,7 @@ import {
   EventRouteActivator,
   EventListComponent,
 } from './barrels';
+import { EventListResolver } from './events/shared/events-list-resolver.service';
 
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
     component: CreateEventComponent,
     canDeactivate: ['canDeactivateCreateEvent'],
   }, //Para previnir o usuário de sair de uma página o avisando na hora quando tentar sair e estiver por exemplo, preenchendo um formulário. Podemos usar uma função ou um serviço
-  { path: 'events', component: EventListComponent },
+  {
+    path: 'events',
+    component: EventListComponent,
+    resolve: { events: EventListResolver },
+  },
   {
     path: 'events/:id',
     component: EventDetailsComponent,
