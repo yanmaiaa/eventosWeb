@@ -15,6 +15,7 @@ import {
   AppRoutingModule,
 } from './barrels';
 import { EventListResolver } from './events/shared/events-list-resolver.service';
+import { AuthService } from './user/auth.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { EventListResolver } from './events/shared/events-list-resolver.service'
     ToastrService,
     EventRouteActivator,
     EventListResolver,
+    AuthService,
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
   ], //Aqui são adcionados os serviços
   bootstrap: [AppComponent],
